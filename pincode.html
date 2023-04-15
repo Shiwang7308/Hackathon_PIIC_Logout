@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon1.ico">
     <link rel="stylesheet" href="master.css">
+
 </head>
 <body>
     <!-- Start main area -->
@@ -137,10 +138,24 @@
         <div class="container-help">
           <h1>Welcome to Jan Sanjivani help desk</h1>
           <!-- <p>Please Enter pincode of your region on the below input field to get details of vaccination drive in your region</p> -->
-          <form action="http://localhost:3001/covid/">
-            <input type="text" placeholder="Enter pincode of your region here" name="pincode" required>
-            <button type="submit">Submit</button>
-          </form>
+          <!-- <form action="http://localhost:3001/covid/"> -->
+           
+            <div id="vaccineInfo" style="display: none;">
+                <h3 id="availability">Total Centeres Availability: </h3>
+                <h4 id="center">Center Name: </h4>
+                <p id="doses">Total Doses: </p>
+                <p id="vaccine">Vaccine: </p>
+                <p id="age">Age: </p>
+                <p id="from">From: </p>
+                <p id="to">To: </p>
+            </div>
+            <!-- <input id="pincode" type="number" value=""> -->
+	<!-- <button id="btn1" onClick="changeColor()">Submit</button> -->
+    <input type="text" id="pincode" placeholder="Enter pincode of your region here" name="pincode" value="" required>
+    <button id="btn1" onClick="changeColor()" type="submit">Submit</button>
+    <hr>
+	<button id="btn2" style="display: none;" type="submit">Back to Help Desk</button>
+          <!-- </form> -->
         </div>
         <br>
         <br>
@@ -301,5 +316,6 @@
       </footer>
       <!-- End footer -->
       </div>
+      <script src="./js/pincode.js"></script>
 </body>
 </html>
